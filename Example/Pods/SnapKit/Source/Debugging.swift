@@ -65,8 +65,7 @@ public extension LayoutConstraint {
                 description += " - \(abs(self.constant))"
             }
         }
-        
-        if self.priority != 1000.0 {
+        if self.priority.rawValue != 1000.0 {
             description += " ^\(self.priority)"
         }
         
