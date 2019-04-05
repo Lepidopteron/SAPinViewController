@@ -254,7 +254,7 @@ open class SAPinViewController: UIViewController {
             })
         }
         view.addSubview(blurView)
-        view.bringSubview(toFront: blurView)
+        view.bringSubviewToFront(blurView)
         blurView.snp.makeConstraints { (make) in
             make.edges.equalTo(self.view)
         }
@@ -486,7 +486,7 @@ open class SAPinViewController: UIViewController {
         return UIScreen.main.bounds.height == 480
     }
     fileprivate func setAttributedTitleForButtonWithTitle(_ title: String, font: UIFont, color: UIColor) {
-        cancelButton.setAttributedTitle(NSAttributedString(string: title, attributes: [NSAttributedStringKey.font:font,NSAttributedStringKey.foregroundColor:color]), for: UIControlState())
+        cancelButton.setAttributedTitle(NSAttributedString(string: title, attributes: [NSAttributedString.Key.font:font,NSAttributedStringKey.foregroundColor:color]), for: UIControlState())
     }
     fileprivate func pinErrorAnimate() {
         for item in circleViews {
