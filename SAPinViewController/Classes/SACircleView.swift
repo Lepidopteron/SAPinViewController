@@ -119,7 +119,7 @@ class SACircleView: UIView {
         
     }
     func getAnimationOptions(_ curve: String) -> UIView.AnimationOptions {
-        return UIViewAnimationOptions.curveLinear
+        return UIView.AnimationOptions.curveLinear
     }
     func resetAllForBallView() {
         x = 0

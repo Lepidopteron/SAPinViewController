@@ -486,7 +486,7 @@ open class SAPinViewController: UIViewController {
         return UIScreen.main.bounds.height == 480
     }
     fileprivate func setAttributedTitleForButtonWithTitle(_ title: String, font: UIFont, color: UIColor) {
-        cancelButton.setAttributedTitle(NSAttributedString(string: title, attributes: [NSAttributedString.Key.font:font,NSAttributedStringKey.foregroundColor:color]), for: UIControlState())
+        cancelButton.setAttributedTitle(NSAttributedString(string: title, attributes: [NSAttributedString.Key.font:font,NSAttributedString.Key.foregroundColor:color]), for: UIControl.State())
     }
     fileprivate func pinErrorAnimate() {
         for item in circleViews {
