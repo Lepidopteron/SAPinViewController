@@ -254,7 +254,7 @@ open class SAPinViewController: UIViewController {
             })
         }
         view.addSubview(blurView)
-        view.bringSubviewToFront(blurView)
+        view.bringSubview(toFront: blurView)
         blurView.snp.makeConstraints { (make) in
             make.edges.equalTo(self.view)
         }
