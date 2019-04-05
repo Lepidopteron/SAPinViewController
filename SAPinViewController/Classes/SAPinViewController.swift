@@ -469,7 +469,7 @@ open class SAPinViewController: UIViewController {
             make.height.equalTo(44)
         }
     }
-    func cancelDeleteTap() {
+    @objc func cancelDeleteTap() {
         if cancelButton.titleLabel?.text == SAPinConstant.DeleteString {
             if tappedButtons.count > 0 {
                 circleViews[tappedButtons.count-1].animateTapEmpty()
@@ -486,7 +486,7 @@ open class SAPinViewController: UIViewController {
         return UIScreen.main.bounds.height == 480
     }
     fileprivate func setAttributedTitleForButtonWithTitle(_ title: String, font: UIFont, color: UIColor) {
-        cancelButton.setAttributedTitle(NSAttributedString(string: title, attributes: [NSFontAttributeName:font,NSForegroundColorAttributeName:color]), for: UIControlState())
+        cancelButton.setAttributedTitle(NSAttributedString(string: title, attributes: [NSAttributedStringKey.font:font,NSAttributedStringKey.foregroundColor:color]), for: UIControlState())
     }
     fileprivate func pinErrorAnimate() {
         for item in circleViews {
